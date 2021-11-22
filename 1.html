@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    const obj =[
+        {name:'Souffle Cheese Cake', price:3900, picture:'menu/d1.jpg'},
+        {name:'Devil\'s Choco Cake', price:3900, picture:'menu/d2.jpg'},
+        {name:'Choco Tiramisu', price:3900, picture:'menu/d3.jpg'},
+        {name:'Honey Caramel Bread', price:4600, picture:'menu/d4.jpg'},
+        {name:'Maple Nut Bread', price:4800, picture:'menu/d5.jpg'},
+        {name:'Croissant', price:2300, picture:'menu/d6.jpg'},
+        ]
+    //객체 -> JSON(문자열)로 변환
+
+    const jsonStr = JSON.stringify(obj)
+
+    localStorage.setItem("dessert", jsonStr)
+</script>
+</body>
+</html>
