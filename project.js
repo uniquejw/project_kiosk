@@ -178,5 +178,3 @@
     orderListEle.innerHTML = ''
     orders = []
 }
-
-
