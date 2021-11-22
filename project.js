@@ -206,44 +206,25 @@
 
 
 
-    //     function showOrderItems() {
-    //     const orderListEle = document.querySelector(".orderlist")
-    //     let str = ''
-    //     let sum = 0
-    //     for (let i = 0; i < orders.length; i++) {
-    //     const orderItem = orders[i]
-    //
-    //     str += `<ol class="list-group list-group-numbered">
-    //   <div class="list-group-item d-flex justify-content-between align-items-start">
-    //     <div class="ms-2 me-auto">
-    //       <div class="fw-bold">${orderItem.name}</div>
-    //       ${orderItem.price}
-    //     </div>
-    //     <span class="badge bg-primary rounded-pill">${orderItem.qty}</span>
-    //   </div>
-    // </ol>`
-    //     sum += orderItem.price * orderItem.qty
-    // }
-    //     str += `<ul class="list-group list-group-flush" style="float:right">
-    //   <li class="list-group-item">총계 : ${sum}</li>`
-    //     orderListEle.innerHTML = str
-    // }
-    $(document).ready(function() {
+        function showOrderItems() {
+        const orderListEle = document.querySelector(".orderlist")
+        let str = ''
+        let sum = 0
+        for (let i = 0; i < orders.length; i++) {
+        const orderItem = orders[i]
 
-        const myModal = new bootstrap.Modal(document.querySelector('#exampleModal')) // relatedTarget
-
-        $("#1").on("click", function(e){
-
-            $(".modal-body").html("<img src='img/j04.jpg'/>")
-
-            myModal.show()
-        })
-
-        $("#m2").on("click", function(e){
-
-            $(".modal-body").html("<img src='img/k03.jpg'/>")
-
-            myModal.show()
-        })
-
-    })
+        str += `<ol class="list-group list-group-numbered">
+      <div class="list-group-item d-flex justify-content-between align-items-start">
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">${orderItem.name}</div>
+          ${orderItem.price}
+        </div>
+        <span class="badge bg-primary rounded-pill">${orderItem.qty}</span>
+      </div>
+    </ol>`
+        sum += orderItem.price * orderItem.qty
+    }
+        str += `<ul class="list-group list-group-flush" style="float:right">
+      <li class="list-group-item">총계 : ${sum}</li>`
+        orderListEle.innerHTML = str
+    }
